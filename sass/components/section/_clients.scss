@@ -1,0 +1,42 @@
+.clients-list {
+  @extend %flex-wrap;
+  justify-content: center;
+  margin: -15px;
+}
+.clients-list__item {
+  margin: 15px;
+}
+.clients-list__link {
+  @extend %flex-center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  transition: border var(--time-transition) var(--cubic);
+
+  &:hover {
+    border-color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 320px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 480px) {
+    width: 210px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+}
+
+.clients-list__icon {
+  fill: var(--icon-color);
+  transition: fill var(--time-transition) var(--cubic);
+  .clients-list__link:hover & {
+    fill: var(--accent-color);
+  }
+}
